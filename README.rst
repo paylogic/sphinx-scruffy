@@ -3,6 +3,15 @@ sphinx-scruffy: Plug-in for Sphinx to render "scruffy" diagrams
 
 Plug-in for Sphinx to render "scruffy" diagrams.
 
+
+.. image:: https://api.travis-ci.org/paylogic/sphinx-scruffy.png
+   :target: https://travis-ci.org/paylogic/sphinx-scruffy
+.. image:: https://pypip.in/v/sphinx-scruffy/badge.png
+   :target: https://crate.io/packages/sphinx-scruffy/
+.. image:: https://coveralls.io/repos/paylogic/sphinx-scruffy/badge.png?branch=master
+   :target: https://coveralls.io/r/paylogic/sphinx-scruffy
+
+
 Installation
 ------------
 
