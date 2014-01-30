@@ -1,0 +1,6 @@
+mock
+pytest-cache
+pytest-cov
+pytest-pep8
+pytest-xdist
+-e git+https://github.com/aivarsk/scruffy.git#egg=scruffy
