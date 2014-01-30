@@ -1,7 +1,7 @@
 language: python
 # command to install dependencies
 before_install:
- - sudo apt-get install graphviz 
+ - sudo apt-get install graphviz plotutils
 install:
   - pip install python-coveralls
 # # command to run tests
