@@ -3,7 +3,7 @@ language: python
 before_install:
  - sudo apt-get install graphviz plotutils
 install:
-  - pip install python-coveralls
+  - pip install python-coveralls virtualenv
 # # command to run tests
 script: python setup.py test
 after_success:
