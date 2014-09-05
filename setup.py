@@ -1,11 +1,13 @@
+"""Setuptools entry point."""
 from os.path import abspath, dirname, join
 
-from setuptools import setup, find_packages
+from setuptools import setup
 from setuptools.command.test import test as TestCommand
 import sys
 
 
 class ToxTestCommand(TestCommand):
+
     """Test command which runs tox under the hood."""
 
     def finalize_options(self):
@@ -28,8 +30,8 @@ for text_file in ['README.rst', 'CHANGES.rst']:
         long_description.append(f.read())
 
 setup(
-    name='sphinx_scruffy',
-    version='0.2',
+    name='sphinx-scruffy',
+    version='1.0.0',
     description='Plug-in for Sphinx to render "scruffy" diagrams.',
     long_description='\n'.join(long_description),
     author='Paylogic International',
@@ -40,7 +42,7 @@ setup(
         'scruffy',
         'Pillow'
     ],
-    packages=find_packages(exclude=['ez_setup']),
+    py_modules=['sphinx_scruffy'],
     tests_require=['detox'],
     cmdclass={'test': ToxTestCommand},
     keywords='sphinx scruffy diagrams documentation',
