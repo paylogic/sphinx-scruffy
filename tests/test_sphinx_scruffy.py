@@ -19,7 +19,7 @@ def build_dir():
 
 def test_sphinx_scruffy(build_dir):
     """Test sphinx_scruffy plugin."""
-    res = sphinx.main(['-c ' + os.path.join(BASE_DIR, 'conf.py'), BASE_DIR, build_dir])
+    res = sphinx.build_main(['-c ' + os.path.join(BASE_DIR, 'conf.py'), BASE_DIR, build_dir])
     assert res is 0
     assert 'index.html' in os.listdir(build_dir)
 
@@ -27,6 +27,6 @@ def test_sphinx_scruffy(build_dir):
 def test_sphinx_scruffy_error(monkeypatch, build_dir):
     """Test sphinx_scruffy plugin if renderer fails. Should not affect the whole build."""
     monkeypatch.setattr(sphinx_scruffy, 'render_scruffy', lambda *args, **kwargs: 1 / 0)
-    res = sphinx.main(['-c ' + os.path.join(BASE_DIR, 'conf.py'), BASE_DIR, build_dir])
+    res = sphinx.build_main(['-c ' + os.path.join(BASE_DIR, 'conf.py'), BASE_DIR, build_dir])
     assert res is 0
     assert 'index.html' in os.listdir(build_dir)

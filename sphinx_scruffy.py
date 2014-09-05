@@ -21,6 +21,7 @@ import suml.yuml2dot
 
 
 class ScruffyOptions(object):
+
     """Scruffy configuration class."""
 
     def __init__(self, kw):
@@ -37,11 +38,14 @@ class ScruffyOptions(object):
 
 
 class Scruffy(nodes.General, nodes.Element):
+
     """Scruffy node."""
 
 
 class ScruffySimple(Directive):
+
     """Directive to insert Scruffy graphs (marked up as plain text)."""
+
     has_content = True
     required_arguments = 0
     optional_arguments = 1
@@ -60,6 +64,7 @@ class ScruffySimple(Directive):
 
 def render_scruffy(self, code, options, format, prefix='scruffy'):
     """Render scruffy code into a PNG output file.
+
     :param self: Sphinx main class object
     :param code: `string` of the code to be rendered
     :param options: `list` of rendering options
@@ -87,6 +92,7 @@ def render_scruffy(self, code, options, format, prefix='scruffy'):
 
 def render_scruffy_html(self, node, code, options, prefix='scruffy', imgcls=None, alt=None):
     """Render scruffy node as html.
+
     :param self: Sphinx main class object
     :param node: Sphinx node object
     :param code: `string` of the code to be rendered
@@ -113,6 +119,7 @@ def render_scruffy_html(self, node, code, options, prefix='scruffy', imgcls=None
 
 def html_visit_scruffy(self, node):
     """Scruffy html rendering.
+
     :param self: Sphinx main class object
     :param node: Sphinx node object
     """
@@ -121,6 +128,7 @@ def html_visit_scruffy(self, node):
 
 def setup(app):
     """Shpinx plugin entry point.
+
     :param app: Sphinx application object
     """
     app.add_node(Scruffy,
