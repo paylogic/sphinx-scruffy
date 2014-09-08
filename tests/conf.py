@@ -29,6 +29,4 @@ pygments_style = 'sphinx'
 html_theme = 'default'
 html_title = 'Documentation for the Test'
 html_short_title = 'Test'
-html_logo = os.path.join(media_directory, 'logo.png')
-html_favicon = os.path.join(media_directory, 'favicon.ico')
 html_static_path = [media_directory]
